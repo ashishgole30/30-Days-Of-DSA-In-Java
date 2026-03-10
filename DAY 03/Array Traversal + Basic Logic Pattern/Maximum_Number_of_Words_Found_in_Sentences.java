@@ -57,7 +57,12 @@ public class Maximum_Number_of_Words_Found_in_Sentences {
         System.out.println(maxWords);
     }
 }
-/* Concepts Used: */
+/*
+ * Concepts Used:Data Structure Used: 1D Array (String array)
+ * Pattern Used: Array traversal + String traversal + Space counting + Maximum
+ * tracking
+ */
+
 /*
  * Initial Thought Process:
  * 1. String array called "sentences" is given
