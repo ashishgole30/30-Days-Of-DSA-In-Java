@@ -87,4 +87,21 @@ public class Count_Operations_to_Obtain_Zero {
  * Loop should stop immediately when either becomes 0.
  */
 
-/* Leetcode Code: */
+/*
+ * Leetcode Code:
+ * class Solution {
+ * public int countOperations(int num1, int num2) {
+ * int numberOfOperations = 0;
+ * while (num1 != 0 && num2 != 0) {
+ * if (num1 >= num2) {
+ * num1 = num1 - num2;
+ * numberOfOperations++;
+ * } else {
+ * num2 = num2 - num1;
+ * numberOfOperations++;
+ * }
+ * }
+ * return numberOfOperations;
+ * }
+ * }
+ */
