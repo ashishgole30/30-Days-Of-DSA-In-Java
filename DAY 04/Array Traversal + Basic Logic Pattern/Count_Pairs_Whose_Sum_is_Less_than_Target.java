@@ -40,6 +40,21 @@ public class Count_Pairs_Whose_Sum_is_Less_than_Target {
          */
 
         /* VS CODE Code: */
+
+        int[] nums = { -1, 1, 2, 3, 1 };
+        int n = nums.length;
+        int target = 2;
+        int numberOfPairs = 0;
+
+        for (int i = 0; i < n; i++) {
+            for (int j = i + 1; j < n; j++) {
+                if (nums[i] + nums[j] < target) {
+                    numberOfPairs++;
+                }
+            }
+        }
+        System.out.println(numberOfPairs);
+
     }
 }
 /*
@@ -53,5 +68,32 @@ public class Count_Pairs_Whose_Sum_is_Less_than_Target {
  * Nested traversal + Pair comparison + Condition + Counter
  */
 
-/* Thought Process: */
-/* Leetcode Code: */
+/*
+ * Note
+ * Why j = i + 1 ?
+ * Each pair counted only once
+ * And never pair element with itself
+ * basically:
+ * No self pairing
+ * No duplicate reversed pairs
+ * Only unique combinations:
+ * and j = i + 1 means always i<j
+ */
+/*
+ * Leetcode Code:
+ * class Solution {
+ * public int countPairs(List<Integer> nums, int target) {
+ * int numberOfPairs = 0;
+ * int n = nums.size();
+ * 
+ * for (int i = 0; i < n ; i++) {
+ * for (int j = i + 1; j < n; j++) {
+ * if (nums.get(i) + nums.get(j) < target) {
+ * numberOfPairs++;
+ * }
+ * }
+ * }
+ * return numberOfPairs;
+ * }
+ * }
+ */
