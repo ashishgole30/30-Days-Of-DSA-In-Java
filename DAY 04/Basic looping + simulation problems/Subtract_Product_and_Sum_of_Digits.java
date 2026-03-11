@@ -58,5 +58,20 @@ public class Subtract_Product_and_Sum_of_Digits {
  * Return product - sum
  */
 
-/* Notes: */
-/* Leetcode Code: */
+/*
+ * Leetcode Code:
+ * class Solution {
+ * public int subtractProductAndSum(int n) {
+ * int copy = n;
+ * int sum = 0;
+ * int product = 1;
+ * while (copy != 0) {
+ * int lastDigit = copy % 10;
+ * sum = sum + lastDigit;
+ * product = product * lastDigit;
+ * copy = copy / 10;
+ * }
+ * return product - sum;
+ * }
+ * }
+ */
