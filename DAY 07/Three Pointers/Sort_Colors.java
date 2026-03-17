@@ -112,6 +112,14 @@ public class Sort_Colors {
  * ✔ Increment both low and mid only when value is 0
  * ✔ Increment only mid when value is 1
  * ✔ Decrement only high when value is 2
+ * 
+ * 
+ * | Value at mid | Action | Why |
+ * | ------------ | ---------------------------- | --------------- |
+ * | 0 | swap(low, mid), low++, mid++ | 0 goes left |
+ * | 1 | mid++ | Already correct |
+ * | 2 | swap(mid, high), high-- | 2 goes right |
+ * 
  */
 /*
  * leetcode code:
